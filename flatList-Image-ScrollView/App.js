@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import AlignItemsExample from './components/AlignItemsExample';
 
 export default function App() {
   return (
-    <View style={[styles.container, { marginLeft: 40 }]}>
-      <Text style={[styles.message, styles.warning]}>Some Text</Text>
+    <View>
+      <AlignItemsExample />
     </View>
   );
 }
