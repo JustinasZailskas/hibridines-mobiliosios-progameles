@@ -4,13 +4,15 @@ import AlignItemsExample from './components/AlignItemsExample';
 import JustifyContentExample from './components/JustifyContentExample';
 import AlignSelfExample from './components/AlignSelfExample';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import FlexWrapExample from './components/FlexWrapExample';
 
 export default function App() {
   return (
     <SafeAreaView>
       {/* <AlignItemsExample /> */}
       {/* <JustifyContentExample /> */}
-      <AlignSelfExample />
+      {/* <AlignSelfExample /> */}
+      <FlexWrapExample />
     </SafeAreaView>
   );
 }
