@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import AlignItemsExample from './components/AlignItemsExample';
+import JustifyContentExample from './components/JustifyContentExample';
 
 export default function App() {
   return (
-    <View>
-      <AlignItemsExample />
-    </View>
+    <ScrollView>
+      {/* <AlignItemsExample /> */}
+      <JustifyContentExample />
+    </ScrollView>
   );
 }
 
