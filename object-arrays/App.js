@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { ScrollView, Text, StyleSheet } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView style={styles.container}>
+      <Text style={styles.item}>Pirmas elementas</Text>
+      <Text style={styles.item}>Antras elementas</Text>
+      <Text style={styles.item}>Trečias elementas</Text>
+      <Text style={styles.item}>Ketvirtas elementas</Text>
+      <Text style={styles.item}>Penktas elementas</Text>
+      <Text style={styles.item}>Šeštas elementas</Text>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 50,
+    padding: 10,
+    backgroundColor: '#f0f0f0'
   },
+  item: {
+    fontSize: 20,
+    marginVertical: 20,
+    textAlign: 'center',
+    backgroundColor: '#ddd',
+    padding: 10,
+    borderRadius: 8
+  }
 });
+
+
