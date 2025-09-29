@@ -3,6 +3,7 @@ import { ScrollView, Text, StyleSheet } from 'react-native';
 import FlatListComponent from './components/FlatListComponent';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import SectionListComponent from './components/SectionListComponent';
+import VirtualizedListComponent from './components/VirtualizedListComponent';
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
     // </ScrollView>
     <SafeAreaView>
       {/* <FlatListComponent /> */}
-      <SectionListComponent />
+      {/* <SectionListComponent /> */}
+      <VirtualizedListComponent />
     </SafeAreaView>
   );
 }
