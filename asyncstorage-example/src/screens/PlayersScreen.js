@@ -28,7 +28,7 @@ export default function PlayersScreen() {
 
   const removePlayers = async () => {
     await removeAllPlayers();
-    setPlayers(null); // arba setPlayers([]), jei saugote masyvą
+    setPlayers([]); // arba setPlayers([]), jei saugote masyvą
   };
 
   const handleRemovePlayer = async (playerId) => {
@@ -65,7 +65,7 @@ export default function PlayersScreen() {
           )}
         />
       )}
-      {players === null ? null : (
+      {players.length === 0  ? null : (
         <View>
           <Button onPress={removePlayers}>Istrinti visus zaidejus</Button>
         </View>

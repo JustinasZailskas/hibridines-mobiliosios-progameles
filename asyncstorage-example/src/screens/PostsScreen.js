@@ -30,29 +30,29 @@ const PostsScreen = () => {
     );
   }
 
-    const postNewPost = async (e) => {
-      e.preventDefault();
-      const postObj = {
-        title: "Naujas postas",
-        body: "Naujo posto turinys",
-        userId: 1,
-      };
-
-      try {
-        const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(postObj),
-        });
-        const data = await res.json();
-        const updatedList = [data, ...posts];
-        setPosts(updatedList);
-      } catch (error) {
-        console.error("Klaida:", error);
-      }
+  const postNewPost = async (e) => {
+    e.preventDefault();
+    const postObj = {
+      title: "Naujas postas",
+      body: "Naujo posto turinys",
+      userId: 1,
     };
+
+    try {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postObj),
+      });
+      const data = await res.json();
+      const updatedList = [data, ...posts];
+      setPosts(updatedList);
+    } catch (error) {
+      console.error("Klaida:", error);
+    }
+  };
 
   return (
     <View style={styles.container}>
