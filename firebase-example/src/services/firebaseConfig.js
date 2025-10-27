@@ -1,4 +1,13 @@
 import { initializeApp, getApps } from 'firebase/app';
+import {
+  FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_STORAGE_BUCKET,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_APP_ID,
+  FIREBASE_MEASUREMENT_ID
+} from "@env";
 
 // Optionally import the services that you want to use
 // import {...} from 'firebase/auth';
@@ -9,13 +18,13 @@ import { initializeApp, getApps } from 'firebase/app';
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyD0i2CLr1PlBkXFCP-LuYCMiEG8BT_UMVI",
-  authDomain: "basketball-player-35f4a.firebaseapp.com",
-  projectId: "basketball-player-35f4a",
-  storageBucket: "basketball-player-35f4a.firebasestorage.app",
-  messagingSenderId: "902336237833",
-  appId: "1:902336237833:web:5ed4c17e5afbd4c25ec3d8",
-  measurementId: "G-9RPTCH9JDT"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID,
+  measurementId: FIREBASE_MEASUREMENT_ID
 };
 
 if (!getApps().length) {
