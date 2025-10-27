@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import PlayerForm from "../components/PlayerForm";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { CounterContext } from "../context/CounterContext";
 
-export default function HomeScreen() {
+export default function CounterScreen() {
   const { counter, increment, decrement } = useContext(CounterContext);
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Skaitiklis</Text>
@@ -13,7 +13,6 @@ export default function HomeScreen() {
         <Button title="+" onPress={increment} />
         <Button title="-" onPress={decrement} />
       </View>
-      <PlayerForm />
     </View>
   );
 }
@@ -21,9 +20,9 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
   },
   title: {
     fontSize: 24,
